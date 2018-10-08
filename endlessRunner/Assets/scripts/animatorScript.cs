@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class animatorScript : MonoBehaviour {
 
+
+	Animator animator;
 	// Use this for initialization
 	void Start () {
-		
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -31,29 +33,6 @@ public class animatorScript : MonoBehaviour {
 			animator.SetFloat("speed", 0);
 
 		}
-		if (Input.GetKey(KeyCode.LeftControl))
-		{
 
-			animator.SetBool("isCrouching", true);
-
-
-		}
-		else
-		{
-			animator.SetBool("isCrouching", false);
-		}
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-
-			animator.SetTrigger("jumps");
-
-
-
-
-		}
-		if (Input.GetKeyDown(KeyCode.X))
-		{
-			animator.SetTrigger("rolls");
-		}
 	}
 }
